@@ -292,7 +292,122 @@ getgenv().SmoothnessAmount = t
 end)
 
 tab3:Button("Silent Aim", function()
-
+    getgenv().Settings = {
+        Silent = {
+            SilentToggle = "p",
+            Enabled = true,
+            AimPart = "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm",
+            Prediction = 0.133,
+            ClosestPart = true,
+            HitChance = 100,
+            AntiGroundshot = true,
+            AntiCurve = true,
+            PredictMovement = true,
+            UseAirPart = true,
+            AirPart = "LowerTorso"
+        },
+        FOV = {
+            Visible = true,
+            Radius = 70,
+            Filled = false,
+        },
+        Checks = { -- Silent Checks Oamwokekda
+            WallCheck = true,
+            UnlockedOnDeath = true,
+            CrewCheck = false,
+        },
+        AutoGunFov = {
+            ["Enabled"] = (false), -- // Gun Fov 
+            ["Double-Barrel SG"] = {["FOV"] = 34}, -- // Db
+            ["Revolver"] = {["FOV"] = 65}, -- // Rev
+            ["SMG"] = {["FOV"] = 23}, -- // Smg
+            ["Shotgun"] = {["FOV"] = 20}, -- // Shotgun
+            ["Rifle"] = {["FOV"] = 26}, -- // Rifle
+            ["TacticalShotgun"] = {["FOV"] = 430}, -- // Rev
+            ["Silencer"] = {["FOV"] = 170}, -- // Smg
+            ["AK47"] = {["FOV"] = 130}, -- // Shotgun
+            ["P90"] = {["FOV"] = 120}, -- // Rifle
+            ["Glock"] = {["FOV"] = 120}, -- // Rifle
+            ["RPG"] = {["FOV"] = 120}, --// Rpg 
+            ["AR"] = {["FOV"] = 120} 
+        },
+        AutoPrediction = { -- this is for silent
+            Enabled = true,
+            ping20_30 = 0.102,
+            ping30_40 = 0.107,
+            ping40_50 = 0.11,
+            ping50_60 = 0.12731,
+            ping60_70 = 0.12731,
+            ping70_80 = 0.12951,
+            ping80_90 = 0.13181,
+            ping90_100 = 0.138,
+            ping100_110 = 0.146,
+            ping110_120 = 0.1367,
+            ping120_130 = 0.1401,
+            ping130_140 = 0.1437,
+            ping140_150 = 0.153,
+            ping150_160 = 0.1514,
+            ping160_170 = 0.1663,
+            ping170_180 = 0.1672,
+            ping180_190 = 0.1848,
+            ping190_200 = 0.1865,
+        }, 
+        AimAssist = { -- Smoothlock, Camlock wtv
+            Enable = true,
+            ToggleKey = true,
+            UseKeyBoardKey = true,
+            KeyBoardKey = Enum.KeyCode.Q,
+            ThirdPerson = true,
+            FirstPerson = true,
+            AutoPingSets = true,
+            UseCircleRadius = false,
+            DisableOutSideCircle = false,
+            UseShake = true, -- AutoPred For Camlock
+            ShakePower = 100,
+            CheckForWalls = true,
+        },
+        Check = { -- Checks For Cumlock Aahhh
+            CheckIfKo = true,
+            DisableOnPlayerDeath = true,
+        },
+        Prediction = {
+            PredictMovement = true,
+            PredictionVelocity = 0.16780,
+        },
+        Smooth = {
+            Smoothness = true, -- For Cumlock
+            SmoothnessAmount = 999,
+        },
+        Part = {
+            AimPart = "UpperTorso",
+            CheckIfJumpedAimPart = "HumanoidRootPart",
+            CheckIfJumped = true,
+            GetClosestPart = true,
+        },
+        Resolver = {
+            UnderGround = false,
+            DetectDesync = false,
+            AntiAimViewer = true,
+            AntiAimViewerInterval = 6,
+        },
+        Visual = {
+            Fov = false,
+            FovTransparency = 1,
+            FovThickness = 1,
+            FovColor = Color3.fromRGB(255, 185, 255),
+            FovRadius = 360,
+        },
+        Spoofer = {
+            MemorySpoofer = true,
+            MemoryTabColor = Color3.fromRGB(211, 88, 33),
+            MemoryMost = 1500,
+            MemoryLeast = 6000,
+            
+      
+        },
+     }
+       
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ImHaalfi/V4DH-Streamable/main/V4DH_Best_Streamable.lua"))()
 end)
 
 tab4:Button("Mage Animation", function()
